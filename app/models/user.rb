@@ -2,10 +2,8 @@ class User < ActiveRecord::Base
 	
 	has_secure_password
 
-	EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-
 	validates :username, presence: true, uniqueness: true
-	validates :email, presence: true, uniqueness: true, format: { with: EMAIL_REGEX }
+	validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@.\s]+\.)+[^@.\s]+\z/ }
 	validates :agency_id, presence: true
 	validates_inclusion_of :role, :in => 0..2
 
@@ -38,5 +36,5 @@ class User < ActiveRecord::Base
 			return false
 		end
 	end
-	
+
 end
