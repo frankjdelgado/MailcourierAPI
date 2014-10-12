@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.delete_all
-User.create(username: 'david', password: '123', password_confirmation: '123', email: 'test@test.com', agency_id: 0)
+User.create(username: 'david', password: '12345678', password_confirmation: '12345678', email: 'test@test.com', agency_id: 0)

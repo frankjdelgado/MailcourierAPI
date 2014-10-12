@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
 	validates :username, presence: true, uniqueness: true
 	validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@.\s]+\.)+[^@.\s]+\z/ }
 	validates :agency_id, presence: true
+	validates :password, length: { minimum: 8 }
 	validates_inclusion_of :role, :in => 0..2
 
 	default_scope {order(username: :asc)}
