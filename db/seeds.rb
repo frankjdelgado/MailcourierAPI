@@ -9,7 +9,7 @@
 User.delete_all
 Agency.delete_all
 Package.delete_all
-
+Rate.delete_all
 
 10.times do |i|
   Agency.create(location: "Location ##{i}")
@@ -33,4 +33,9 @@ end
 		:shipping_cost => rand(1.0..100.0),
 		:ref_number => "MC-"+SecureRandom.hex(10).to_s
 	  )
+end
+
+Rate.create(package: rand(1.0..100.0), cost: rand(1.0..100.0), status: 1)
+3.times do |i|
+	Rate.create(package: rand(1.0..100.0), cost: rand(1.0..100.0), status: 0)
 end

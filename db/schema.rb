@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141012081719) do
+ActiveRecord::Schema.define(version: 20141012085614) do
 
   create_table "agencies", force: true do |t|
     t.string   "location"
@@ -41,6 +41,14 @@ ActiveRecord::Schema.define(version: 20141012081719) do
 
   add_index "packages", ["agency_id"], name: "index_packages_on_agency_id", using: :btree
   add_index "packages", ["ref_number"], name: "index_packages_on_ref_number", unique: true, using: :btree
+
+  create_table "rates", force: true do |t|
+    t.float    "package",    limit: 24
+    t.float    "cost",       limit: 24
+    t.integer  "status"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "username",                    null: false
