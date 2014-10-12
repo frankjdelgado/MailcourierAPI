@@ -11,7 +11,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141012072955) do
+ActiveRecord::Schema.define(version: 20141012081719) do
+
+  create_table "agencies", force: true do |t|
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "packages", force: true do |t|
+    t.string   "ref_number",                            null: false
+    t.text     "description",                           null: false
+    t.float    "weight",         limit: 24,             null: false
+    t.float    "height",         limit: 24,             null: false
+    t.float    "depth",          limit: 24,             null: false
+    t.float    "width",          limit: 24,             null: false
+    t.float    "value",          limit: 24,             null: false
+    t.float    "shipping_cost",  limit: 24,             null: false
+    t.integer  "status",                    default: 0
+    t.integer  "agency_id"
+    t.datetime "date_added"
+    t.datetime "date_arrived"
+    t.datetime "date_delivered"
+    t.integer  "sender_id",                             null: false
+    t.integer  "receiver_id",                           null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "packages", ["agency_id"], name: "index_packages_on_agency_id", using: :btree
+  add_index "packages", ["ref_number"], name: "index_packages_on_ref_number", unique: true, using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",                    null: false
