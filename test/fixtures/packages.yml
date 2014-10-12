@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ref_number: MyString
+  description: MyText
+  weight: 1.5
+  height: 1.5
+  depth: 1.5
+  width: 1.5
+  value: 1.5
+  shipping_cost: 1.5
+  status: 1
+  agency_id: 
+  date_added: 2014-10-12 03:47:19
+  date_arrived: 2014-10-12 03:47:19
+  date_delivered: 2014-10-12 03:47:19
+  sender_id: 1
+  receiver_id: 1
+
+two:
+  ref_number: MyString
+  description: MyText
+  weight: 1.5
+  height: 1.5
+  depth: 1.5
+  width: 1.5
+  value: 1.5
+  shipping_cost: 1.5
+  status: 1
+  agency_id: 
+  date_added: 2014-10-12 03:47:19
+  date_arrived: 2014-10-12 03:47:19
+  date_delivered: 2014-10-12 03:47:19
+  sender_id: 1
+  receiver_id: 1
