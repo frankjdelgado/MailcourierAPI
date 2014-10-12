@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20141012085614) do
   create_table "rates", force: true do |t|
     t.float    "package",    limit: 24
     t.float    "cost",       limit: 24
-    t.integer  "status"
+    t.integer  "status",                default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end

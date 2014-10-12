@@ -3,7 +3,7 @@ class CreateRates < ActiveRecord::Migration
     create_table :rates do |t|
       t.float :package
       t.float :cost
-      t.integer :status
+      t.integer :status, default: 0
 
       t.timestamps
     end
