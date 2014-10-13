@@ -2,6 +2,8 @@ module Api
 	module V1
 		class UserController < ApplicationController
 
+			before_action :validate_token
+			
 			respond_to :json
 
 			def index
@@ -10,7 +12,7 @@ module Api
 			end
 
 			def create
-				
+
 			end
 
 		end
