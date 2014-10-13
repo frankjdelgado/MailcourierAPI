@@ -30,4 +30,9 @@ class ApplicationController < ActionController::Base
         end
     end
 
+    # Get user associated with token
+    def current_user
+        Session.where(token: request.headers["token"]).first.user
+    end
+
 end

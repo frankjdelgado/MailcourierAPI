@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
 	scope :members, -> { where(role: 0) }
 
 
-	def self.is_member?
+	def is_member?
 		if role == 0
 			return true
 		else
@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
 		end
 	end
 
-	def self.is_operator?
+	def is_operator?
 		if role == 1
 			return true
 		else
@@ -37,7 +37,7 @@ class User < ActiveRecord::Base
 		end
 	end
 
-	def self.is_admin?
+	def is_admin?
 		if role == 2
 			return true
 		else
