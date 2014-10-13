@@ -30,9 +30,47 @@ class ApplicationController < ActionController::Base
         end
     end
 
+    def validate_admin
+        if current_user.is_admin?
+            return true
+        else
+            render status: :unauthorized,json: {error_code: "Invalid access", error_description: "You can't access this resorce"}
+        end
+    end
+
+    def validate_operator
+        if !current_user.is_member?
+            return true
+        else
+            render status: :unauthorized,json: {error_code: "Invalid access", error_description: "You can't access this resorce"}
+        end
+    end
+
     # Get user associated with token
     def current_user
         Session.where(token: request.headers["token"]).first.user
+    end
+
+    def get_shipping_cost(height,weight,depth,width,value)
+        # Get last system rate added
+        rate = Rate.active.first
+
+        # Get params for formula
+        packageRate = rate.package.to_f
+        costRate    = rate.cost.to_f
+        height      = height.to_f
+        weight      = weight.to_f
+        depth       = depth.to_f
+        width       = width.to_f
+        value       = value.to_f
+
+        # calculate final cost
+        shipping_cost = ((height*weight*depth*width)/packageRate) + (costRate*(value/100.0)) 
+
+        # Round final cost
+        shipping_cost = shipping_cost.round(2)
+
+        return shipping_cost
     end
 
 end

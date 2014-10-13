@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   # Set responses to json
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-      resources :user
-      resources :session
+    	get 'rate/calculate' => 'rate#calculate'
+    	resources :user
+		resources :session
+		resources :rate
     end
   end
 end

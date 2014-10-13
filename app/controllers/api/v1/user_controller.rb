@@ -26,7 +26,7 @@ module Api
 					render status: :created, json: user.as_json
 				else
 					response["error_type"] = "Invalid request"
-  					response["error_description"] = "Wrong parameters to create user"
+  					response["error_description"] = "Wrong parameters to create resource"
 					render status: :bad_request, json: response
 				end
 

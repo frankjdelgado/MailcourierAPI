@@ -15,5 +15,9 @@ class Rate < ActiveRecord::Base
 			return false
 		end
 	end
+
+	def as_json(options = nil)
+		super({ only: [:id, :package, :cost, :status] }.merge(options || {}))
+	end
 	
 end
