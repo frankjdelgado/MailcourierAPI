@@ -4,7 +4,7 @@ module Api
 
 			respond_to :json
 
-			# Show user oauth token
+			# Show user oauth token by basic auth
 			def index
 
 				response = Hash.new
@@ -12,7 +12,8 @@ module Api
 				user = User.where(username: request.headers["username"]).first
 
 				if user.authenticate(request.headers["password"])
-					respond_with session.as_json , status: 200
+					response["token"] = user.session.token
+					render status: :ok, json: response
 				else
 					response["error_type"] = "Invalid basic auth"
       				response["error_description"] = "Invalid user or password"
