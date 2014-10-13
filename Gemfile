@@ -38,8 +38,4 @@ gem 'bcrypt', '~> 3.1.7'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :test do
-  gem "rspec-rails"
-  gem "factory_girl_rails"
-  gem 'ffaker'
-end
+gem 'thin', '~> 1.6.3'

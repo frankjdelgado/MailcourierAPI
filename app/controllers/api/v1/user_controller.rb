@@ -2,9 +2,11 @@ module Api
 	module V1
 		class UserController < ApplicationController
 
+			respond_to :json
+
 			def index
 				users = User.all
-				render json:  users.as_json , status: 200
+				respond_with users.as_json , status: 200
 			end
 
 		end

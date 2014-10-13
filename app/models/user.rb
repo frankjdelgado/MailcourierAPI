@@ -8,6 +8,13 @@ class User < ActiveRecord::Base
 	validates :password, length: { minimum: 8 }
 	validates_inclusion_of :role, :in => 0..2
 
+	has_many :packages_sent, class_name: "Package", foreign_key: "sender_id"
+	has_many :packages_received, class_name: "Package", foreign_key: "receiver_id"
+
+  	belongs_to :agency
+
+  	has_one :session
+
 	default_scope {order(username: :asc)}
 	scope :admins, -> { where(role: 2) }
 	scope :operators, -> { where(role: 1) }

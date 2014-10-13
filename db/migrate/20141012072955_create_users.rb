@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :email, null: false
       t.integer :role, default:0
       t.references :agency, index: true
-      t.string :oauth_token
       t.string :password_digest
 
       t.timestamps

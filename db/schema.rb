@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141012085614) do
+ActiveRecord::Schema.define(version: 20141013085125) do
 
   create_table "agencies", force: true do |t|
     t.string   "location"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 20141012085614) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "sessions", force: true do |t|
+    t.integer  "user_id"
+    t.string   "token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["token"], name: "index_sessions_on_token", unique: true, using: :btree
+  add_index "sessions", ["user_id"], name: "index_sessions_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username",                    null: false

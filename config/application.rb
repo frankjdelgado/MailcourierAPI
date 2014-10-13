@@ -28,5 +28,8 @@ module Rubyproject2
         g.javascripts = false
         g.helper = false
     end
+
+    # HTTPS
+    config.force_ssl = true
   end
 end
