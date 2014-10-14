@@ -11,8 +11,17 @@ module Api
 
 				if current_user.is_member?
 					packages = current_user.packages
+					if params[:ref_number]
+						packages = packages.where(ref_number: params[:ref_number])
+					end
 				else
 					packages = current_user.agency.packages.agency_pending
+					if params[:username]
+						packages = Package.search_by_user(params[:username])
+					end
+					if params[:ref_number]
+						packages = Package.where(ref_number: params[:ref_number])
+					end
 				end
 
 				render status: :ok, json: packages.to_json
