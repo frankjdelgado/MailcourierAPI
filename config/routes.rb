@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   		resources :session
   		resources :rate
       resources :agency
+      resources :package
     end
   end
 end

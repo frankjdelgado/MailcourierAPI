@@ -13,6 +13,8 @@ class Package < ActiveRecord::Base
 	validates :receiver_id, presence: true, numericality: true
 	validates :sender_id, presence: true, numericality: true
 
+	validates :status, inclusion: { in: 0..2 }
+
 	belongs_to :receiver, class_name: "User", foreign_key: "receiver_id"
 	belongs_to :sender, class_name: "User", foreign_key: "sender_id"
 	belongs_to :agency

@@ -16,6 +16,17 @@ class ApplicationController < ActionController::Base
         return new_token
     end
 
+    def generate_ref_number
+
+        # Generate random ref number untill is unique
+        begin
+            new_ref_number = "MC-"+SecureRandom.hex(10).to_s
+            ref_numbers = Package.all.map{ |t| t.ref_number}
+        end while ref_numbers.include? new_ref_number
+
+        return new_ref_number
+    end
+
     # Validate the token is valid and belongs to existing user
     def validate_token
 

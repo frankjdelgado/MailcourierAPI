@@ -45,6 +45,10 @@ class User < ActiveRecord::Base
 		end
 	end
 
+	def packages
+   		Package.where('sender_id = ? OR receiver_id = ?', id, id)
+ 	end
+
 	# Filter user attributes to show
 	def as_json(options = nil)
 		super({ only: [:id, :username, :email, :role] }.merge(options || {}))
