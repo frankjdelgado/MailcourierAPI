@@ -4,12 +4,16 @@ Rails.application.routes.draw do
   # Set responses to json
   namespace :api, defaults: { format: :json } do
     namespace :v1 do
-    	get 'rate/calculate' => 'rate#calculate'
-    	resources :user
-  		resources :session
-  		resources :rate
-      resources :agency
-      resources :package
+    	# get 'rate/calculate' => 'rate#calculate'
+    	resources :user, except: [:new, :edit, :destroy]
+  		resources :session, only: [:index, :create]
+  		resources :rate, except: [:new, :edit] do
+        collection do
+          get 'calculate'
+        end 
+      end
+      resources :agency, except: [:new, :edit]
+      resources :package, except: [:new, :edit, :destroy]
     end
   end
 end
