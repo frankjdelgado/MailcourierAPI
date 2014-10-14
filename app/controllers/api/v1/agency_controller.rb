@@ -5,6 +5,8 @@ module Api
 			before_action :validate_token
 			before_filter :validate_admin
 
+			respond_to :json
+
 			def index
 				agencies = Agency.all
 				render status: :ok, json: agencies.to_json
