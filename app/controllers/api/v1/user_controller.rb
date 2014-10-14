@@ -32,6 +32,40 @@ module Api
 
 			end
 
+			def show
+				response = Hash.new
+
+				if current_user.id.to_s == params[:id]
+					render status: :ok, json: current_user.as_json
+				else
+					response["error_type"] = "Invalid request"
+  					response["error_description"] = "Wrong parameters to show resource"
+					render status: :unauthorized, json: response
+				end
+			end
+
+			def update
+				response = Hash.new
+				
+				if current_user.id.to_s == params[:id]
+
+					user = User.find(params[:id])
+
+					
+					if user.update(user_params)
+						render status: :ok, json: user.as_json
+						return
+					else
+						render status: :unauthorized, json: user.errors
+						return
+					end
+				else
+					response["error_type"] = "Invalid request"
+  					response["error_description"] = "Wrong parameters to edit resource"
+					render status: :unauthorized, json: response
+				end
+			end
+
 
 			private
 
