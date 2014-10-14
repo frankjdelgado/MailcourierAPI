@@ -6,8 +6,9 @@ Rails.application.routes.draw do
     namespace :v1 do
     	get 'rate/calculate' => 'rate#calculate'
     	resources :user
-		resources :session
-		resources :rate
+  		resources :session
+  		resources :rate
+      resources :agency
     end
   end
 end
