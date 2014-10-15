@@ -49,16 +49,13 @@ module Api
 			end
 
 			def create
-				response = Hash.new
 
 				rate = Rate.new(rate_params)
 
 		        if rate.save
 		        	render status: :created, json: rate.as_json
 		        else
-		        	response["error_type"] = "Invalid request"
-		        	response["error_description"] = "Wrong parameters to create resource"
-					render status: :bad_request, json: response
+					render status: :bad_request, json: rate.errors
 		        end
 			end
 
@@ -71,7 +68,7 @@ module Api
 				if rate.blank?
 					response["error_type"] = "Invalid request"
 			        response["error_description"] = "Wrong parameters to update resource"
-			        render status: :bad_request, json: response
+			        render status: :bad_request, json: rate.errors
 			        return
 				end
 
@@ -95,9 +92,7 @@ module Api
 					# Deactivate
 					active.status = 0
 					if !active.save
-						response["error_type"] = "Server error"
-			        	response["error_description"] = "Couln't process your request"
-			        	render status: :internal_server_error, json: response
+			        	render status: :internal_server_error, json: active.errors
 			        	return
 					end					
 				end
@@ -106,9 +101,7 @@ module Api
 					render status: :ok, json: rate.as_json
 					return
 				else
-					response["error_type"] = "Invalid request"
-		        	response["error_description"] = "Wrong parameters to update resource"
-		        	render status: :bad_request, json: response
+		        	render status: :bad_request, json: rate.errors
 				end
 				
 			end
@@ -123,9 +116,7 @@ module Api
 			        response["message"] = "Rate deleted successfully"
 					render status: :ok, json: response
 				else
-					response["error_type"] = "Invalid request"
-			        response["error_description"] = "Wrong parameters to destroy resource"
-			        render status: :bad_request, json: response
+			        render status: :bad_request, json: rate.errors
 				end
 			end
 

@@ -15,9 +15,7 @@ module Api
 					response["token"] = user.session.token
 					render status: :ok, json: response
 				else
-					response["error_type"] = "Invalid basic auth"
-      				response["error_description"] = "Invalid user or password"
-					render status: :bad_request, json: response
+					render status: :bad_request, json: user.errors
 				end
 
 			end
@@ -46,16 +44,12 @@ module Api
 						render status: :created, json: response
 						return
 					else
-						response["error_type"] = "Server error"
-      					response["error_description"] = "Server couldn't create oauth token"
-						render status: :internal_server_error, json: response
+						render status: :internal_server_error, json: session.errors
 						return
 					end
 
 				else
-					response["error_type"] = "Invalid basic auth"
-      				response["error_description"] = "Invalid user or password"
-					render status: :bad_request, json: response
+					render status: :bad_request, json: user.errors
 					return 
 				end
 

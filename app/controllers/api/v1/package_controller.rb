@@ -56,10 +56,6 @@ module Api
 				if package.save
 					render status: :ok, json: package
 				else
-					response = Hash.new
-
-					response["error_type"] = "Invalid request"
-		        	response["error_description"] = "Wrong parameters to create resource"
 					render status: :ok, json: package.errors
 				end
 			end

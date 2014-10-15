@@ -18,17 +18,13 @@ module Api
 			end
 
 			def create
-
-				response = Hash.new
-
+				
 				agency = Agency.new(agency_params)
 
 				if agency.save
 					render status: :ok, json: agency.to_json
 				else
-					response["error_type"] = "Invalid request"
-		        	response["error_description"] = "Wrong parameters to show resource"
-					render status: :bad_request, json: response
+					render status: :bad_request, json: agency.errors
 				end
 			end
 
@@ -47,9 +43,7 @@ module Api
 					if agency.update(agency_params)
 						render status: :ok, json: agency.to_json
 					else
-						response["error_type"] = "Invalid request"
-			        	response["error_description"] = "Wrong parameters to show resource"
-						render status: :bad_request, json: response
+						render status: :bad_request, json: agency.errors
 					end
 				end
 			end
@@ -71,9 +65,7 @@ module Api
 					render status: :ok, json: 'Agency deleted successfully'
 					return
 				else
-					response["error_type"] = "Invalid request"
-		        	response["error_description"] = "Wrong parameters to show resource"
-					render status: :bad_request, json: response
+					render status: :bad_request, json: agency.errors
 				end
 			end
 
