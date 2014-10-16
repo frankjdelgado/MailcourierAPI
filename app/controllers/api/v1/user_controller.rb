@@ -25,6 +25,7 @@ module Api
 			param :role, ["0", "1", "2"], desc: 'User role inside the application. Can only be specified by an Administrator'
 			formats ['json']
 			error code: 400, desc: "Bad request. Parameters given are incorrect."
+			error code: 401, desc: "Unauthorized. You can only access with administrators permissions."
 			example ' {"id":7,"username":"testusername3","email":"test2@test.com","role":2} '
 			def create
 
@@ -67,6 +68,7 @@ module Api
 			param :password, String, desc: 'Account password. Minimun lenght must be 8'
 			param :role, ["0", "1", "2"], desc: 'User role inside the application. Can only be specified by an Administrator'
 			formats ['json']
+			error code: 401, desc: "Unauthorized. You can only access with administrators permissions."
 			error code: 400, desc: "Bad request. Parameters given are incorrect."
 			example ' {"id":7,"username":"testusername3","email":"test2@test.com","role":2} '
 			def update
