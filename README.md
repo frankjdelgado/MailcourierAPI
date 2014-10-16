@@ -1,14 +1,15 @@
 rubyproject2
 ============
 
-Mailcourier API. Based on rubyproject1
+Basic Mailcourier REST API for [Mailcourier](https://github.com/frankjdelgado/rubyproject1)
 
 ## Made by 
 * Marvin Bernal
 * Francisco Delgado
 
 ## API Documentation
-* Directory: /docs/
+* Directory: /doc/apidoc.html
+* Route: http://localhost:3000/apipie
 
 ### Create  User
 
@@ -24,5 +25,9 @@ Mailcourier API. Based on rubyproject1
 
 ## Starting Server
 
-* rails start: api without ssl
-* thin start --ssl : api though https
+* API without ssl: rails start 
+* API though https: thin start --ssl (You will have to accept certificate manually) 
+
+## License
+
+Ruby on Rails is released under the [MIT License](http://www.opensource.org/licenses/MIT).
