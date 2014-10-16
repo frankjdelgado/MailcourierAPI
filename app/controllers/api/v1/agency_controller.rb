@@ -16,7 +16,7 @@ module Api
 				render status: :ok, json: agencies.to_json
 			end
 
-			api :GET, "/agency/:id", "Show single agency"
+			api :GET, "/agency/:id", "Show specified agency"
 			param :id, :number, desc: 'Agency database ID', required: true
 			formats ['json']
 			error code: 401, desc: "Unauthorized. You can only access with administrators permissions."
@@ -43,7 +43,7 @@ module Api
 				end
 			end
 
-			api :PUT, "/agency/:id", "Update the given agency"
+			api :PUT, "/agency/:id", "Update agency attributes"
 			param :id, :number, desc: 'Agency database ID', required: true
 			param :location, String, desc: 'Agency location or name', required: true
 			formats ['json']
@@ -70,7 +70,7 @@ module Api
 				end
 			end
 
-			api :DELETE, "/agency/:id", "Update the given agency"
+			api :DELETE, "/agency/:id", "Delete specified agency"
 			param :id, :number, desc: 'Agency database ID', required: true
 			formats ['json']
 			error code: 401, desc: "Unauthorized. You can only access with administrators permissions."
@@ -99,7 +99,7 @@ module Api
 
 
 			private
-			
+
 			def agency_params
 				params.permit(:location)
 			end
