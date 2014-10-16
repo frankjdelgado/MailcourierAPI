@@ -3,6 +3,7 @@ class Rate < ActiveRecord::Base
 	validates :package, presence: true, numericality: true
 	validates :cost, presence: true, numericality: true
 	validates :status, inclusion: { in: 0..1 }
+	before_destroy :check_if_active
 
 	default_scope {order(status: :desc)}
 	scope :active, -> { where(status: 1) }
@@ -13,6 +14,13 @@ class Rate < ActiveRecord::Base
 			return true
 		else
 			return false
+		end
+	end
+
+	def check_if_active
+		if status == 1
+			self.errors[:base] << "Cannot delete rate while its active."
+			return false 
 		end
 	end
 
