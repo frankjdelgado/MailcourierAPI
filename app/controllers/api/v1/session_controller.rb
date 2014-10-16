@@ -4,12 +4,24 @@ module Api
 
 			respond_to :json
 
-			# Show user oauth token by basic auth
+			api :GET, "/session", "Show user oauth token using basic auth"
+			param :username, String, 'HTTP Header parameter. Required'
+			param :password, String, 'HTTP Header parameter. Required'
+			formats ['json']
+			error code: 400, desc: "Bad request. Username or password are invalid."
+			example ' {"token":"0J3tZTMLGG4eFOXkKbcD2MNcFAXyeBrNvSqp1/W8Ea01hJKaiEsgCirSm/mblhx9K5ftIDAAFtNteJ5A9khe3g=="} '
 			def index
 
 				response = Hash.new
 
 				user = User.where(username: request.headers["username"]).first
+
+				if !user
+					response["error_type"] = "Invalid request"
+		        	response["error_description"] = "Wrong parameters to find session token."
+		        	render status: :bad_request, json: response
+		        	return
+				end
 
 				if user.authenticate(request.headers["password"])
 					response["token"] = user.session.token
@@ -20,13 +32,25 @@ module Api
 
 			end
 
-			# Generate oauth token by basic auth
+			api :POST, "/session", "Generate oauth token using basic auth"
+			param :username, String, 'HTTP Header parameter. Required'
+			param :password, String, 'HTTP Header parameter. Required'
+			formats ['json']
+			error code: 400, desc: "Bad request. Username or password are invalid/missing."
+			example ' {"token":"SlNvy/H3jXt/lavoxdki2ftWgv7Yo/svgyzAhEPnb0j+94SKCLXlk+B+D96ckpHLGzEgoQc7IM7IqAW3oYboLw=="} '
 			def create
 
 				response = Hash.new
 
 				# Get user
 				user = User.where(username: request.headers["username"]).first
+
+				if !user
+					response["error_type"] = "Invalid request"
+		        	response["error_description"] = "Wrong parameters to find session token."
+		        	render status: :bad_request, json: response
+		        	return
+				end
 
 				# Check user password
 				if user.authenticate(request.headers["password"])
@@ -49,7 +73,9 @@ module Api
 					end
 
 				else
-					render status: :bad_request, json: user.errors
+					response["error_type"] = "Invalid request"
+		        	response["error_description"] = "Wrong parameters to authenticate resource"
+		        	render status: :bad_request, json: response
 					return 
 				end
 
