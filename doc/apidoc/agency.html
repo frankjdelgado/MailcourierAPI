@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.html'>Mailcourier API 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Agency
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Agency
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/agency/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/v1/agency
+          </a>
+          <br>
+          <small>List agencies</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+  <h3>Errors</h3>
+    401
+    Unauthorized. You can only access with administrators permissions.
+    <br>
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">[{&quot;id&quot;:1,&quot;location&quot;:&quot;Location #0&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:2,&quot;location&quot;:&quot;Location #1&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:3,&quot;location&quot;:&quot;Location #2&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:4,&quot;location&quot;:&quot;Location #3&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:5,&quot;location&quot;:&quot;Location #4&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:6,&quot;location&quot;:&quot;Location #5&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:7,&quot;location&quot;:&quot;Location #6&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:8,&quot;location&quot;:&quot;Location #7&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:9,&quot;location&quot;:&quot;Location #8&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:10,&quot;location&quot;:&quot;Location #9&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;}] </pre>
+
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/agency/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/v1/agency/:id
+          </a>
+          <br>
+          <small>Show specified agency</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+  <h3>Errors</h3>
+    401
+    Unauthorized. You can only access with administrators permissions.
+    <br>
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{&quot;id&quot;:1,&quot;location&quot;:&quot;Location #0&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;} </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Agency database ID</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/agency/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/v1/agency/:id
+          </a>
+          <br>
+          <small>Create an agency</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+  <h3>Errors</h3>
+    401
+    Unauthorized. You can only access with administrators permissions.
+    <br>
+    400
+    Bad Request. Wrong parameters.
+    <br>
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{&quot;id&quot;:11,&quot;location&quot;:&quot;LocationRandom&quot;,&quot;created_at&quot;:&quot;2014-10-16T01:27:54.550Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:27:54.550Z&quot;} </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Agency location or name</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/agency/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/v1/agency/:id
+          </a>
+          <br>
+          <small>Update agency attributes</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+  <h3>Errors</h3>
+    401
+    Unauthorized. You can only access with administrators permissions.
+    <br>
+    400
+    Bad Request. Wrong parameters.
+    <br>
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{&quot;id&quot;:11,&quot;location&quot;:&quot;LocationRandom2&quot;,&quot;created_at&quot;:&quot;2014-10-16T01:27:54.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:29:40.248Z&quot;} </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Agency database ID</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>location </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Agency location or name</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/agency/destroy.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-destroy'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            DELETE /api/v1/agency/:id
+          </a>
+          <br>
+          <small>Delete specified agency</small>
+        </h2>
+    </div>
+
+
+    <div id='description-destroy' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+  <h3>Errors</h3>
+    401
+    Unauthorized. You can only access with administrators permissions.
+    <br>
+    400
+    Bad Request. Wrong parameters.
+    <br>
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">Agency deleted successfully </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Agency database ID</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

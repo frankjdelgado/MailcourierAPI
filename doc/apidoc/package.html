@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='../apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li>
+    <a href='../apidoc.html'>Mailcourier API 1.0</a>
+    <span class='divider'>/</span>
+  </li>
+  <li class='active'>
+    Package
+    
+  </li>
+  
+</ul>
+
+<div class='page-header'>
+  <h1>
+    Package
+    <br>
+    <small></small>
+  </h1>
+</div>
+
+
+
+
+<div class='accordion' id='accordion'>
+
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/package/index.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-index'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/v1/package
+          </a>
+          <br>
+          <small>List user packages. If user is an operator, the endpoint will show all packages related to his agency.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-index' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+  <h3>Errors</h3>
+    401
+    Unauthorized. You can only access with operator permissions.
+    <br>
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">[{&quot;id&quot;:1,&quot;ref_number&quot;:&quot;MC-a94eac9f0867a4fba101&quot;,&quot;description&quot;:&quot;package0&quot;,&quot;weight&quot;:30.1852,&quot;height&quot;:17.1054,&quot;depth&quot;:1.44668,&quot;width&quot;:88.9232,&quot;value&quot;:17.9698,&quot;shipping_cost&quot;:99.6356,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:null,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:2,&quot;receiver_id&quot;:1,&quot;created_at&quot;:&quot;2014-10-13T08:57:32.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:32.000Z&quot;},{&quot;id&quot;:6,&quot;ref_number&quot;:&quot;itj6Lnu3QwIgya89Nyq9bxFBCWVRLhz7WabG/otrOc1qMdYa1C/o4xIzz55nbPP6YLppDUmHF3R+MdrmZsDG/A==&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:32:39.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:3,&quot;created_at&quot;:&quot;2014-10-14T12:32:39.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:32:39.000Z&quot;},{&quot;id&quot;:7,&quot;ref_number&quot;:&quot;RT42BdZMmnXESQ2kLdnn2e0rbmVOPMMUvPvmamVjoIYrFvk3Zx9dS6Z89JRwftCEtq6GDIkqRG/35ewd//TG9w==&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:32:43.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-14T12:32:43.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:32:43.000Z&quot;},{&quot;id&quot;:8,&quot;ref_number&quot;:&quot;MC-97528ba590a8880f99f0&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:35:41.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-14T12:35:41.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:35:41.000Z&quot;},{&quot;id&quot;:9,&quot;ref_number&quot;:&quot;MC-e7b943d21b5412c853f0&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:35:44.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-14T12:35:44.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:35:44.000Z&quot;}] </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>ref_number </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter: Package reference number</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>username </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Filter: Package sender/receiver username. Can only be used by operators.</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/package/show.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-show'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            GET /api/v1/package
+          </a>
+          <br>
+          <small>Show specified package. If user is a member, it will only show packages related to him.</small>
+        </h2>
+    </div>
+
+
+    <div id='description-show' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{&quot;id&quot;:2,&quot;ref_number&quot;:&quot;MC-f640505999e450294eb4&quot;,&quot;description&quot;:&quot;package1&quot;,&quot;weight&quot;:21.8673,&quot;height&quot;:80.323,&quot;depth&quot;:69.3697,&quot;width&quot;:7.47692,&quot;value&quot;:31.216,&quot;shipping_cost&quot;:29.7139,&quot;status&quot;:2,&quot;agency_id&quot;:8,&quot;date_added&quot;:null,&quot;date_arrived&quot;:&quot;2014-10-14T12:51:44.000Z&quot;,&quot;date_delivered&quot;:&quot;2014-10-14T12:52:40.000Z&quot;,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-13T08:57:32.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:52:40.000Z&quot;} </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package database ID</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/package/create.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-create'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            POST /api/v1/package
+          </a>
+          <br>
+          <small>Create package</small>
+        </h2>
+    </div>
+
+
+    <div id='description-create' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+  <h3>Errors</h3>
+    401
+    Unauthorized. You can only access with operator permissions.
+    <br>
+    400
+    Bad request. Parameters given are incorrect.
+    <br>
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{&quot;id&quot;:10,&quot;ref_number&quot;:&quot;MC-4f0f7ffe36416b71cfd1&quot;,&quot;description&quot;:&quot;a package&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:12.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:100.0,&quot;shipping_cost&quot;:1173.06,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-16T01:53:51.040Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-16T01:53:51.047Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:53:51.047Z&quot;} </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>weight </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package weight</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>height </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package height</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>width </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package width</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>depth </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package depth</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>value </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package value</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>agency_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package destination id</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>sender_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package user sender id</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>receiver_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package user receiver id</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>description </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package short description</p>
+
+        <br>
+        Value: Must be String
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+    <hr>
+    <div class='pull-right small'>
+      <a href='../apidoc/package/update.html'> >>> </a>
+    </div>
+    <div>
+        <h2>
+          <a href='#description-update'
+           class='accordion-toggle'
+           data-toggle='collapse'
+           data-parent='#accordion'>
+            PUT /api/v1/package/:id
+          </a>
+          <br>
+          <small>Update package status and dates</small>
+        </h2>
+    </div>
+
+
+    <div id='description-update' class='collapse accordion-body'>
+      
+
+  <h3>Supported Formats</h3>
+  json
+
+
+
+  <h3>Examples</h3>
+    <pre class="prettyprint">{&quot;id&quot;:10,&quot;ref_number&quot;:&quot;MC-4f0f7ffe36416b71cfd1&quot;,&quot;description&quot;:&quot;a package&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:12.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:100.0,&quot;shipping_cost&quot;:1173.06,&quot;status&quot;:1,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-16T01:53:51.000Z&quot;,&quot;date_arrived&quot;:&quot;2014-10-16T01:57:38.955Z&quot;,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-16T01:53:51.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:57:38.962Z&quot;} </pre>
+
+  <h3>Params</h3>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Param name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package database ID</p>
+
+        <br>
+        Value: Must be a number.
+
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>status </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Package status</p>
+
+        <br>
+        Value: Must be one of: 0, 1, 2.
+
+
+    </td>
+
+  </tr>
+
+  
+
+    </tbody>
+  </table>
+
+    </div>
+</div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='../apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='../apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

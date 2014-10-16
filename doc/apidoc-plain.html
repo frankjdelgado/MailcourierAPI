@@ -1,0 +1,1404 @@
+  <h4><a href='#agency'>Agency</a></h4>
+  <ul>
+      <li><a href='#agency-index'>index</a></li>
+      <li><a href='#agency-show'>show</a></li>
+      <li><a href='#agency-create'>create</a></li>
+      <li><a href='#agency-update'>update</a></li>
+      <li><a href='#agency-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#package'>Package</a></h4>
+  <ul>
+      <li><a href='#package-index'>index</a></li>
+      <li><a href='#package-show'>show</a></li>
+      <li><a href='#package-create'>create</a></li>
+      <li><a href='#package-update'>update</a></li>
+  </ul>
+  <h4><a href='#rate'>Rate</a></h4>
+  <ul>
+      <li><a href='#rate-calculate'>calculate</a></li>
+      <li><a href='#rate-index'>index</a></li>
+      <li><a href='#rate-show'>show</a></li>
+      <li><a href='#rate-create'>create</a></li>
+      <li><a href='#rate-update'>update</a></li>
+      <li><a href='#rate-destroy'>destroy</a></li>
+  </ul>
+  <h4><a href='#session'>Session</a></h4>
+  <ul>
+      <li><a href='#session-index'>index</a></li>
+      <li><a href='#session-create'>create</a></li>
+  </ul>
+  <h4><a href='#user'>User</a></h4>
+  <ul>
+      <li><a href='#user-index'>index</a></li>
+      <li><a href='#user-create'>create</a></li>
+      <li><a href='#user-show'>show</a></li>
+      <li><a href='#user-update'>update</a></li>
+  </ul>
+
+
+
+  <hr/>
+
+  <div>
+    <h2 id="agency">
+      <a href='#agency'>Agency</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="agency-index">
+      <a href='#agency'>Agency</a> / <a href='#agency-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/agency
+            <br>
+            <small>List agencies</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">[{&quot;id&quot;:1,&quot;location&quot;:&quot;Location #0&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:2,&quot;location&quot;:&quot;Location #1&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:3,&quot;location&quot;:&quot;Location #2&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:4,&quot;location&quot;:&quot;Location #3&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:5,&quot;location&quot;:&quot;Location #4&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:6,&quot;location&quot;:&quot;Location #5&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:7,&quot;location&quot;:&quot;Location #6&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:8,&quot;location&quot;:&quot;Location #7&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:9,&quot;location&quot;:&quot;Location #8&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;},{&quot;id&quot;:10,&quot;location&quot;:&quot;Location #9&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;}] </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+      </div>
+      <hr/>
+
+      <h3 id="agency-show">
+      <a href='#agency'>Agency</a> / <a href='#agency-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/agency/:id
+            <br>
+            <small>Show specified agency</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:1,&quot;location&quot;:&quot;Location #0&quot;,&quot;created_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:31.000Z&quot;} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Agency database ID</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="agency-create">
+      <a href='#agency'>Agency</a> / <a href='#agency-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/agency/:id
+            <br>
+            <small>Create an agency</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:11,&quot;location&quot;:&quot;LocationRandom&quot;,&quot;created_at&quot;:&quot;2014-10-16T01:27:54.550Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:27:54.550Z&quot;} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad Request. Wrong parameters.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>location </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+<p>Agency location or name</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="agency-update">
+      <a href='#agency'>Agency</a> / <a href='#agency-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/v1/agency/:id
+            <br>
+            <small>Update agency attributes</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:11,&quot;location&quot;:&quot;LocationRandom2&quot;,&quot;created_at&quot;:&quot;2014-10-16T01:27:54.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:29:40.248Z&quot;} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad Request. Wrong parameters.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Agency database ID</p>
+
+    </li>
+    
+    <li>
+      <strong>location </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+<p>Agency location or name</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="agency-destroy">
+      <a href='#agency'>Agency</a> / <a href='#agency-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/v1/agency/:id
+            <br>
+            <small>Delete specified agency</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">Agency deleted successfully </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad Request. Wrong parameters.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Agency database ID</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="package">
+      <a href='#package'>Package</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="package-index">
+      <a href='#package'>Package</a> / <a href='#package-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/package
+            <br>
+            <small>List user packages. If user is an operator, the endpoint will show all packages related to his agency.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">[{&quot;id&quot;:1,&quot;ref_number&quot;:&quot;MC-a94eac9f0867a4fba101&quot;,&quot;description&quot;:&quot;package0&quot;,&quot;weight&quot;:30.1852,&quot;height&quot;:17.1054,&quot;depth&quot;:1.44668,&quot;width&quot;:88.9232,&quot;value&quot;:17.9698,&quot;shipping_cost&quot;:99.6356,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:null,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:2,&quot;receiver_id&quot;:1,&quot;created_at&quot;:&quot;2014-10-13T08:57:32.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-13T08:57:32.000Z&quot;},{&quot;id&quot;:6,&quot;ref_number&quot;:&quot;itj6Lnu3QwIgya89Nyq9bxFBCWVRLhz7WabG/otrOc1qMdYa1C/o4xIzz55nbPP6YLppDUmHF3R+MdrmZsDG/A==&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:32:39.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:3,&quot;created_at&quot;:&quot;2014-10-14T12:32:39.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:32:39.000Z&quot;},{&quot;id&quot;:7,&quot;ref_number&quot;:&quot;RT42BdZMmnXESQ2kLdnn2e0rbmVOPMMUvPvmamVjoIYrFvk3Zx9dS6Z89JRwftCEtq6GDIkqRG/35ewd//TG9w==&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:32:43.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-14T12:32:43.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:32:43.000Z&quot;},{&quot;id&quot;:8,&quot;ref_number&quot;:&quot;MC-97528ba590a8880f99f0&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:35:41.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-14T12:35:41.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:35:41.000Z&quot;},{&quot;id&quot;:9,&quot;ref_number&quot;:&quot;MC-e7b943d21b5412c853f0&quot;,&quot;description&quot;:&quot;asd&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:10.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:10.0,&quot;shipping_cost&quot;:955.4,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-14T12:35:44.000Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-14T12:35:44.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:35:44.000Z&quot;}] </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with operator permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>ref_number </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>Filter: Package reference number</p>
+
+    </li>
+    
+    <li>
+      <strong>username </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>Filter: Package sender/receiver username. Can only be used by operators.</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="package-show">
+      <a href='#package'>Package</a> / <a href='#package-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/package
+            <br>
+            <small>Show specified package. If user is a member, it will only show packages related to him.</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:2,&quot;ref_number&quot;:&quot;MC-f640505999e450294eb4&quot;,&quot;description&quot;:&quot;package1&quot;,&quot;weight&quot;:21.8673,&quot;height&quot;:80.323,&quot;depth&quot;:69.3697,&quot;width&quot;:7.47692,&quot;value&quot;:31.216,&quot;shipping_cost&quot;:29.7139,&quot;status&quot;:2,&quot;agency_id&quot;:8,&quot;date_added&quot;:null,&quot;date_arrived&quot;:&quot;2014-10-14T12:51:44.000Z&quot;,&quot;date_delivered&quot;:&quot;2014-10-14T12:52:40.000Z&quot;,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-13T08:57:32.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-14T12:52:40.000Z&quot;} </pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package database ID</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="package-create">
+      <a href='#package'>Package</a> / <a href='#package-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/package
+            <br>
+            <small>Create package</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:10,&quot;ref_number&quot;:&quot;MC-4f0f7ffe36416b71cfd1&quot;,&quot;description&quot;:&quot;a package&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:12.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:100.0,&quot;shipping_cost&quot;:1173.06,&quot;status&quot;:0,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-16T01:53:51.040Z&quot;,&quot;date_arrived&quot;:null,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-16T01:53:51.047Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:53:51.047Z&quot;} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with operator permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad request. Parameters given are incorrect.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>weight </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package weight</p>
+
+    </li>
+    
+    <li>
+      <strong>height </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package height</p>
+
+    </li>
+    
+    <li>
+      <strong>width </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package width</p>
+
+    </li>
+    
+    <li>
+      <strong>depth </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package depth</p>
+
+    </li>
+    
+    <li>
+      <strong>value </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package value</p>
+
+    </li>
+    
+    <li>
+      <strong>agency_id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package destination id</p>
+
+    </li>
+    
+    <li>
+      <strong>sender_id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package user sender id</p>
+
+    </li>
+    
+    <li>
+      <strong>receiver_id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package user receiver id</p>
+
+    </li>
+    
+    <li>
+      <strong>description </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+<p>Package short description</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="package-update">
+      <a href='#package'>Package</a> / <a href='#package-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/v1/package/:id
+            <br>
+            <small>Update package status and dates</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:10,&quot;ref_number&quot;:&quot;MC-4f0f7ffe36416b71cfd1&quot;,&quot;description&quot;:&quot;a package&quot;,&quot;weight&quot;:10.0,&quot;height&quot;:12.0,&quot;depth&quot;:10.0,&quot;width&quot;:10.0,&quot;value&quot;:100.0,&quot;shipping_cost&quot;:1173.06,&quot;status&quot;:1,&quot;agency_id&quot;:1,&quot;date_added&quot;:&quot;2014-10-16T01:53:51.000Z&quot;,&quot;date_arrived&quot;:&quot;2014-10-16T01:57:38.955Z&quot;,&quot;date_delivered&quot;:null,&quot;sender_id&quot;:1,&quot;receiver_id&quot;:2,&quot;created_at&quot;:&quot;2014-10-16T01:53:51.000Z&quot;,&quot;updated_at&quot;:&quot;2014-10-16T01:57:38.962Z&quot;} </pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package database ID</p>
+
+    </li>
+    
+    <li>
+      <strong>status </strong>:
+      <small>
+        required
+        
+          [ Must be one of: 0, 1, 2. ]
+      </small>
+      
+<p>Package status</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="rate">
+      <a href='#rate'>Rate</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="rate-calculate">
+      <a href='#rate'>Rate</a> / <a href='#rate-calculate'>calculate</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/rate/calculate
+            <br>
+            <small>Calculate package shipping cost</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;shipping_cost&quot;:1173.06} </pre>
+
+          <h4>Errors</h4>
+            400
+            Bad request. Wrong parameters.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>weight </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package weight</p>
+
+    </li>
+    
+    <li>
+      <strong>height </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package height</p>
+
+    </li>
+    
+    <li>
+      <strong>width </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package width</p>
+
+    </li>
+    
+    <li>
+      <strong>depth </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package depth</p>
+
+    </li>
+    
+    <li>
+      <strong>value </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package value</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="rate-index">
+      <a href='#rate'>Rate</a> / <a href='#rate-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/rate
+            <br>
+            <small>List Mailcourier package rates</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">[{&quot;id&quot;:2,&quot;package&quot;:10.5,&quot;cost&quot;:30.2,&quot;status&quot;:1},{&quot;id&quot;:1,&quot;package&quot;:80.6474,&quot;cost&quot;:28.8981,&quot;status&quot;:0},{&quot;id&quot;:3,&quot;package&quot;:39.0257,&quot;cost&quot;:22.1477,&quot;status&quot;:0},{&quot;id&quot;:4,&quot;package&quot;:67.7276,&quot;cost&quot;:34.1744,&quot;status&quot;:0}] </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+      </div>
+      <hr/>
+
+      <h3 id="rate-show">
+      <a href='#rate'>Rate</a> / <a href='#rate-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/rate/:id
+            <br>
+            <small>Show specified package rate</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:1,&quot;package&quot;:80.6474,&quot;cost&quot;:28.8981,&quot;status&quot;:0} </pre>
+
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package database ID</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="rate-create">
+      <a href='#rate'>Rate</a> / <a href='#rate-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/rate
+            <br>
+            <small>Create package rates. Default status 0</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:5,&quot;package&quot;:10.0,&quot;cost&quot;:10.0,&quot;status&quot;:0} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad request. Wrong parameters.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>cost </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package value rate</p>
+
+    </li>
+    
+    <li>
+      <strong>package </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package dimension rate</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="rate-update">
+      <a href='#rate'>Rate</a> / <a href='#rate-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/v1/rate/:id
+            <br>
+            <small>Update specified package rates attributes</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:5,&quot;package&quot;:12.0,&quot;cost&quot;:12.0,&quot;status&quot;:1} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad request. Wrong parameters.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package database ID</p>
+
+    </li>
+    
+    <li>
+      <strong>cost </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package value rate</p>
+
+    </li>
+    
+    <li>
+      <strong>package </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package dimension rate</p>
+
+    </li>
+    
+    <li>
+      <strong>status </strong>:
+      <small>
+        optional
+        
+          [ Must be one of: 0, 1. ]
+      </small>
+      
+<p>Package rate status. Active/inactive</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="rate-destroy">
+      <a href='#rate'>Rate</a> / <a href='#rate-destroy'>destroy</a>
+      </h3>
+
+      <div>
+          <h4>
+              DELETE /api/v1/rate/:id
+            <br>
+            <small>Delete specified package rates</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;message&quot;:&quot;Rate deleted successfully&quot;} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad request. Wrong parameters or rate is currently active
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Package database ID</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="session">
+      <a href='#session'>Session</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="session-index">
+      <a href='#session'>Session</a> / <a href='#session-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/session
+            <br>
+            <small>Show user oauth token using basic auth</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;token&quot;:&quot;0J3tZTMLGG4eFOXkKbcD2MNcFAXyeBrNvSqp1/W8Ea01hJKaiEsgCirSm/mblhx9K5ftIDAAFtNteJ5A9khe3g==&quot;} </pre>
+
+          <h4>Errors</h4>
+            400
+            Bad request. Username or password are invalid.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>username </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>HTTP Header parameter. Required</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>HTTP Header parameter. Required</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="session-create">
+      <a href='#session'>Session</a> / <a href='#session-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/session
+            <br>
+            <small>Generate oauth token using basic auth</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;token&quot;:&quot;SlNvy/H3jXt/lavoxdki2ftWgv7Yo/svgyzAhEPnb0j+94SKCLXlk+B+D96ckpHLGzEgoQc7IM7IqAW3oYboLw==&quot;} </pre>
+
+          <h4>Errors</h4>
+            400
+            Bad request. Username or password are invalid/missing.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>username </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>HTTP Header parameter. Required</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>HTTP Header parameter. Required</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>
+
+  <hr/>
+
+  <div>
+    <h2 id="user">
+      <a href='#user'>User</a><br>
+      <small></small>
+    </h2>
+  </div>
+
+
+  <div>
+
+      <hr/>
+
+      <h3 id="user-index">
+      <a href='#user'>User</a> / <a href='#user-index'>index</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/user
+            <br>
+            <small>List users</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">[{&quot;id&quot;:5,&quot;username&quot;:&quot;testusername&quot;,&quot;email&quot;:&quot;test@test.com&quot;,&quot;role&quot;:2},{&quot;id&quot;:6,&quot;username&quot;:&quot;testusername1&quot;,&quot;email&quot;:&quot;test1@test.com&quot;,&quot;role&quot;:1},{&quot;id&quot;:1,&quot;username&quot;:&quot;user0&quot;,&quot;email&quot;:&quot;user0@a.com&quot;,&quot;role&quot;:0},{&quot;id&quot;:2,&quot;username&quot;:&quot;user1&quot;,&quot;email&quot;:&quot;user1@a.com&quot;,&quot;role&quot;:0},{&quot;id&quot;:3,&quot;username&quot;:&quot;user2&quot;,&quot;email&quot;:&quot;user2@a.com&quot;,&quot;role&quot;:2}] </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+      </div>
+      <hr/>
+
+      <h3 id="user-create">
+      <a href='#user'>User</a> / <a href='#user-create'>create</a>
+      </h3>
+
+      <div>
+          <h4>
+              POST /api/v1/user
+            <br>
+            <small>Create an user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:7,&quot;username&quot;:&quot;testusername3&quot;,&quot;email&quot;:&quot;test2@test.com&quot;,&quot;role&quot;:2} </pre>
+
+          <h4>Errors</h4>
+            400
+            Bad request. Parameters given are incorrect.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>username </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+<p>Account username</p>
+
+    </li>
+    
+    <li>
+      <strong>email </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+<p>Account email</p>
+
+    </li>
+    
+    <li>
+      <strong>agency_id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Agency ID related with user</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+<p>Account password. Minimun lenght must be 8</p>
+
+    </li>
+    
+    <li>
+      <strong>password_confirmation </strong>:
+      <small>
+        required
+        
+          [ Must be String ]
+      </small>
+      
+<p>Password confirmation</p>
+
+    </li>
+    
+    <li>
+      <strong>role </strong>:
+      <small>
+        optional
+        
+          [ Must be one of: 0, 1, 2. ]
+      </small>
+      
+<p>User role inside the application. Can only be specified by an Administrator</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="user-show">
+      <a href='#user'>User</a> / <a href='#user-show'>show</a>
+      </h3>
+
+      <div>
+          <h4>
+              GET /api/v1/user/:id
+            <br>
+            <small>Show specified user</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&#39;id&#39;:3,&#39;username&#39;:&#39;user2&#39;,&#39;email&#39;:&#39;user2@a.com&#39;,&#39;role&#39;:0} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access your own user details.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>id </strong>:
+      <small>
+        required
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>User database ID</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+      <hr/>
+
+      <h3 id="user-update">
+      <a href='#user'>User</a> / <a href='#user-update'>update</a>
+      </h3>
+
+      <div>
+          <h4>
+              PUT /api/v1/user/:id
+            <br>
+            <small>Update user attributes</small>
+          </h4>
+      </div>
+
+      <div>
+        
+          <h4>Examples</h4>
+            <pre class="wiki">{&quot;id&quot;:7,&quot;username&quot;:&quot;testusername3&quot;,&quot;email&quot;:&quot;test2@test.com&quot;,&quot;role&quot;:2} </pre>
+
+          <h4>Errors</h4>
+            401
+            Unauthorized. You can only access with administrators permissions.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+            400
+            Bad request. Parameters given are incorrect.
+            <pre class="prettyprint lang-yaml">--- 
+...
+</pre>
+
+            <br>
+
+          <h4>Params</h4>
+          <ul>
+    <li>
+      <strong>username </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>Account username</p>
+
+    </li>
+    
+    <li>
+      <strong>email </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>Account email</p>
+
+    </li>
+    
+    <li>
+      <strong>agency_id </strong>:
+      <small>
+        optional
+        
+          [ Must be a number. ]
+      </small>
+      
+<p>Agency ID related with user</p>
+
+    </li>
+    
+    <li>
+      <strong>password </strong>:
+      <small>
+        optional
+        
+          [ Must be String ]
+      </small>
+      
+<p>Account password. Minimun lenght must be 8</p>
+
+    </li>
+    
+    <li>
+      <strong>role </strong>:
+      <small>
+        optional
+        
+          [ Must be one of: 0, 1, 2. ]
+      </small>
+      
+<p>User role inside the application. Can only be specified by an Administrator</p>
+
+    </li>
+    
+</ul>
+
+      </div>
+  </div>

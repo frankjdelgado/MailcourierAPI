@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div id='container'>
+        <ul class='breadcrumb'>
+  <li class='active'><a href='./apidoc.html'>Mailcourier API 1.0</a></li>
+  
+</ul>
+
+<div>Another API description</div>
+
+<h1 class='page-header'>Resources</h1>
+
+  <h2>
+    <a href='./apidoc/agency.html'>
+      Agency
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/agency/index.html'>GET /api/v1/agency</a>
+            </td>
+            <td width='60%'>List agencies</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/agency/show.html'>GET /api/v1/agency/:id</a>
+            </td>
+            <td width='60%'>Show specified agency</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/agency/create.html'>POST /api/v1/agency/:id</a>
+            </td>
+            <td width='60%'>Create an agency</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/agency/update.html'>PUT /api/v1/agency/:id</a>
+            </td>
+            <td width='60%'>Update agency attributes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/agency/destroy.html'>DELETE /api/v1/agency/:id</a>
+            </td>
+            <td width='60%'>Delete specified agency</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/package.html'>
+      Package
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/package/index.html'>GET /api/v1/package</a>
+            </td>
+            <td width='60%'>List user packages. If user is an operator, the endpoint will show all packages related to his agency.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package/show.html'>GET /api/v1/package</a>
+            </td>
+            <td width='60%'>Show specified package. If user is a member, it will only show packages related to him.</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package/create.html'>POST /api/v1/package</a>
+            </td>
+            <td width='60%'>Create package</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/package/update.html'>PUT /api/v1/package/:id</a>
+            </td>
+            <td width='60%'>Update package status and dates</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/rate.html'>
+      Rate
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/rate/calculate.html'>GET /api/v1/rate/calculate</a>
+            </td>
+            <td width='60%'>Calculate package shipping cost</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/rate/index.html'>GET /api/v1/rate</a>
+            </td>
+            <td width='60%'>List Mailcourier package rates</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/rate/show.html'>GET /api/v1/rate/:id</a>
+            </td>
+            <td width='60%'>Show specified package rate</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/rate/create.html'>POST /api/v1/rate</a>
+            </td>
+            <td width='60%'>Create package rates. Default status 0</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/rate/update.html'>PUT /api/v1/rate/:id</a>
+            </td>
+            <td width='60%'>Update specified package rates attributes</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/rate/destroy.html'>DELETE /api/v1/rate/:id</a>
+            </td>
+            <td width='60%'>Delete specified package rates</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/session.html'>
+      Session
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/session/index.html'>GET /api/v1/session</a>
+            </td>
+            <td width='60%'>Show user oauth token using basic auth</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/session/create.html'>POST /api/v1/session</a>
+            </td>
+            <td width='60%'>Generate oauth token using basic auth</td>
+          </tr>
+    </tbody>
+  </table>
+  <h2>
+    <a href='./apidoc/user.html'>
+      User
+    </a><br>
+    <small></small>
+  </h2>
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Resource</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+          <tr>
+            <td>
+              <a href='./apidoc/user/index.html'>GET /api/v1/user</a>
+            </td>
+            <td width='60%'>List users</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/user/create.html'>POST /api/v1/user</a>
+            </td>
+            <td width='60%'>Create an user</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/user/show.html'>GET /api/v1/user/:id</a>
+            </td>
+            <td width='60%'>Show specified user</td>
+          </tr>
+          <tr>
+            <td>
+              <a href='./apidoc/user/update.html'>PUT /api/v1/user/:id</a>
+            </td>
+            <td width='60%'>Update user attributes</td>
+          </tr>
+    </tbody>
+  </table>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery-1.7.2.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
+</body>
+</html>
