@@ -39,3 +39,5 @@ gem 'bcrypt', '~> 3.1.7'
 # gem 'debugger', group: [:development, :test]
 
 gem 'thin', '~> 1.6.3'
+
+gem 'apipie-rails'

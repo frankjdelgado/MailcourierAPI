@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  apipie
   # Api definition. /api/resource_name/...
   # Set responses to json
   namespace :api, defaults: { format: :json } do

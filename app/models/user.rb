@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	validates :username, presence: true, uniqueness: true
 	validates :email, presence: true, uniqueness: true, format: { with: /\A[^@\s]+@([^@.\s]+\.)+[^@.\s]+\z/ }
 	validates :agency_id, presence: true
-	validates :password, length: { minimum: 8 }
+	validates :password, presence: {on: :create},length: { on: :create, minimum: 8 }
 	validates_inclusion_of :role, :in => 0..2
 
 	has_many :packages_sent, class_name: "Package", foreign_key: "sender_id"

@@ -21,6 +21,6 @@ module Rubyproject2
     # config.i18n.default_locale = :de
 
     # HTTPS
-    config.force_ssl = true
+    config.force_ssl = false
   end
 end
