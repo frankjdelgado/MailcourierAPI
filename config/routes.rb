@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   		resources :rate, except: [:new, :edit] do
         collection do
           get 'calculate'
+          get 'active_rates'
         end 
       end
       resources :agency, except: [:new, :edit]

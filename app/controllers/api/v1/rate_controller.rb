@@ -2,10 +2,26 @@ module Api
 	module V1
 		class RateController < ApplicationController
 
-			before_action :validate_token
+											# Added exception for MailcourierSAP			
+			before_action :validate_token, :except => [:calculate,:active_rates]
 			before_filter :validate_admin, :only => [:new, :create, :update, :destroy, :index, :show, :edit]
 
 			respond_to :json
+
+			def active_rates
+				# Added for MailcourierSAP
+				response = Hash.new
+
+				rate = Rate.active.first
+
+				if rate
+					render status: :ok, json: rate.as_json
+				else
+					response["error_type"] = "Invalid request"
+		        	response["error_description"] = "Wrong parameters to show resource"
+					render status: :bad_request, json: response
+				end
+			end
 
 			api :GET, "/rate/calculate", "Calculate package shipping cost"
 			formats ['json']

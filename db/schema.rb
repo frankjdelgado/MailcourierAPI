@@ -65,7 +65,6 @@ ActiveRecord::Schema.define(version: 20141013085125) do
     t.string   "email",                       null: false
     t.integer  "role",            default: 0
     t.integer  "agency_id"
-    t.string   "oauth_token"
     t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
