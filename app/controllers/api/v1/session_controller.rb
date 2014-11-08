@@ -16,7 +16,7 @@ module Api
 
 				user = User.where(username: request.headers["username"]).first
 
-				if !user
+				if !user or !user.session
 					response["error_type"] = "Invalid request"
 		        	response["error_description"] = "Wrong parameters to find session token."
 		        	render status: :bad_request, json: response
