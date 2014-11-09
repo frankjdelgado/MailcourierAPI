@@ -27,11 +27,11 @@ class Package < ActiveRecord::Base
 
 	def status_human
 		if status == 0
-			I18n.t('pending')
+			'pending'
 		elsif status == 1
-			I18n.t('arrived')
+			'arrived'
 		else
-			I18n.t('delivered')
+			'delivered'
 		end	
 	end
 
@@ -57,6 +57,15 @@ class Package < ActiveRecord::Base
 		else
 			return false
 		end
+	end
+
+	# Filter package attributes, show sender and receiver usernames, show status definition
+	def as_json(options ={})
+		hash_info = super({ except: [:sender_id, :receiver_id, :status] }.merge(options || {}))
+		hash_info[:sender] = {id: sender.id, username: sender.username}
+		hash_info[:receiver] = {id: receiver.id, username: receiver.username}
+		hash_info[:status] = status_human
+		hash_info
 	end
 
 	# Search form by ref number
