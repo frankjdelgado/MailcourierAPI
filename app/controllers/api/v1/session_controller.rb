@@ -25,6 +25,8 @@ module Api
 
 				if user.authenticate(request.headers["password"])
 					response["token"] = user.session.token
+					response["username"] = user.username
+					response["role"] = user.role
 					render status: :ok, json: response
 				else
 					render status: :bad_request, json: user.errors
@@ -65,6 +67,8 @@ module Api
 
 					if session.save
 						response["token"] = session.token
+						response["username"] = user.username
+						response["role"] = user.role
 						render status: :created, json: response
 						return
 					else
