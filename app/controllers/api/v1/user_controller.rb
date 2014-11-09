@@ -2,7 +2,7 @@ module Api
 	module V1
 		class UserController < ApplicationController
 
-			before_action :validate_token
+			before_action :validate_token, except: ['create']
 			before_filter :validate_admin, only: ['index']
 
 			respond_to :json
@@ -30,11 +30,11 @@ module Api
 			def create
 
 				# get requester
-				if current_user.is_admin?
-					user = User.new(admin_params)
-				else
+				# if current_user.is_admin?
+					# user = User.new(admin_params)
+				# else
 					user = User.new(user_params)
-				end
+				# end
 
 				if user.save
 					render status: :created, json: user.as_json
@@ -96,7 +96,7 @@ module Api
 			private
 
 			def user_params
-				params.permit(:username, :email, :agency_id, :password, :password_confirmation)
+				params.permit(:username, :email, :agency_id, :password, :password_confirmation, :role)
 			end
 
 			def admin_params

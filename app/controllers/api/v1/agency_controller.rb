@@ -2,8 +2,8 @@ module Api
 	module V1
 		class AgencyController < ApplicationController
 
-			before_action :validate_token
-			before_filter :validate_admin
+			before_action :validate_token, except: ['index']
+			before_filter :validate_admin, except: ['index']
 
 			respond_to :json
 
