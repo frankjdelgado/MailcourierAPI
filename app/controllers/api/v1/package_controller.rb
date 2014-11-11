@@ -55,8 +55,8 @@ module Api
 			param :depth, :number, desc: 'Package depth', required: :true
 			param :value, :number, desc: 'Package value', required: :true
 			param :agency_id, :number, desc: 'Package destination id', required: :true
-			param :sender_id, :number, desc: 'Package user sender id', required: :true
-			param :receiver_id, :number, desc: 'Package user receiver id', required: :true
+			param :sender, String, desc: 'Package user sender username', required: :true
+			param :receiver, String, desc: 'Package user receiver username', required: :true
 			param :description, String, desc: 'Package short description', required: :true
 			error code: 401, desc: "Unauthorized. You can only access with operator permissions."
 			error code: 400, desc: "Bad request. Parameters given are incorrect."
@@ -65,8 +65,10 @@ module Api
 
 				package = Package.new
 
-				package.receiver_id = params[:receiver_id]
-				package.sender_id = params[:sender_id]
+				r = User.where(username: params[:receiver]).first
+				s = User.where(username: params[:sender]).first
+				package.receiver_id =  r.id rescue nil
+				package.sender_id = s.id rescue nil
 				package.agency_id = params[:agency_id]
 				package.description = params[:description]
 				package.value = params[:value]
@@ -84,7 +86,7 @@ module Api
 				if package.save
 					render status: :ok, json: package
 				else
-					render status: :ok, json: package.errors
+					render status: :bad_request, json: package.errors
 				end
 			end
 

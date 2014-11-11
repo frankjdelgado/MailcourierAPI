@@ -24,6 +24,7 @@ module Api
 				end
 
 				if user.authenticate(request.headers["password"])
+					response["id"] = user.id
 					response["token"] = user.session.token
 					response["username"] = user.username
 					response["role"] = user.role
